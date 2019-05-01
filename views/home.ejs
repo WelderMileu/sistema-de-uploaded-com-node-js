@@ -8,8 +8,8 @@
 	</head>
 	<body style="background-color: #f1f1f1">
 		<div class="container">
-			<h1 class="text-primary h3 m-4">Formulario de Desenvolvimento (Node JS)</h1>
-			<form class="form card p-5 m-auto col-lg-5" method="post" enctype="multipart/form-data">
+			<h1 class="text-primary h3 m-4"></h1>
+			<form class="form card p-5 m-auto col-lg-5" method="post" enctype="multipart/form-data" id='formulario'>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text text-light bg-dark">
@@ -46,6 +46,29 @@
 					</button>
 				</div>
 			</form>
+			<div class="container pt-3 col-lg-5 m-auto">
+				<p class="alert alert-primary text-center" id="resultado">Resultado</p>
+			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#formulario').submit({
+					const serialize = $('#formulario').serialize()
+					const caminho = 'server.js';
+
+					$.ajax({
+						url:caminho,
+						type:'post',
+						data:serialize,
+						dataType:'html',
+						success:function(data){
+							$('#resultado').html(data)
+						}
+					})
+					return false;
+				})
+			})
+		</script>
 	</body>
 </html>
