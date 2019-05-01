@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html leng='pt-br'>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body style="background-color: #f1f1f1">
+		<div class="container">
+			<h1 class="text-primary h3 m-4">Formulario de Desenvolvimento (Node JS)</h1>
+			<form class="form card p-5 m-auto col-lg-5" method="post" enctype="multipart/form-data">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text text-light bg-dark">
+							<i class="fa fa-user-o"></i>
+						</span>
+						<input type="text" name="nome" class="form-control" placeholder="Digite Seu nome">
+					</div>
+				</div>
+				<div class="input-group mt-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text text-light bg-dark">
+							<i class="fa fa-calendar"></i>
+						</span>
+						<input type="text" name="idade" class="form-control" placeholder="Digite sua idade">
+					</div>
+				</div>
+				<div class="mt-3">
+					<select class="custom-select col-lg-7">
+						<option value="Emergencia">Emergencia</option>
+						<option value="Normal">Normal</option>
+					</select>
+				</div>
+				<div class="custom-file mt-3 col-lg-7">
+					<input type="file" name="img" class="custom-file-input">
+					<label class="custom-file-label">
+						<i class="fa fa-files-o"></i>
+						Files
+					</label>
+				</div>
+				<div class="mt-3">
+					<button class="btn btn-outline-dark" type="submit">
+						<i class="fa fa-download"></i>
+						Enviar
+					</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
